@@ -15,6 +15,7 @@ filename = sys.argv[1] #Name of file
 path = sys.argv[2] #path
 file = path + filename #filepath
 sample = filename.rsplit( ".", 1 )[ 0 ] #sample name is file without extension
+sampleid = sample.rsplit("_", 1)[0] #remove underscores and anything to strip down to sample ID
 antismash = json.load(open(file))
 
 #get 2 nested json structures
@@ -43,7 +44,7 @@ for i in range(len(bgcindex)):
             prod=data['areas'][bgcindex[i]][j]['protoclusters']['0']['product']
             cstart=data['areas'][bgcindex[i]][j]['protoclusters']['0']['core_start']
             cend=data['areas'][bgcindex[i]][j]['protoclusters']['0']['core_end']
-            df=pd.DataFrame({'sample':[sample],'contig':[bgcids[i]], 'BGC category':[bgct], 'BGC product':[prod], 'core start':[cstart], 'core end':[cend]})
+            df=pd.DataFrame({'sample':[sampleid],'contig':[bgcids[i]], 'BGC category':[bgct], 'BGC product':[prod], 'core start':[cstart], 'core end':[cend]})
             bgctable=pd.concat([bgctable,df],ignore_index=True)
 
 #one hot encode BGC types and make unique contig ID
