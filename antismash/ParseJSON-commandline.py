@@ -69,9 +69,9 @@ bgcsumsample = bgctotal.groupby('sample')[list1].sum(numeric_only=True)
 file1=sampleid+'_bgc_long.tsv'
 file2=sampleid+'_bgc_contigsum.tsv'
 file3=sampleid+'_bgc_samplesum.tsv'
-bgccount.to_csv(file1, sep="\t")
-bgcsumcontig.to_csv(file2, sep="\t")
-bgcsumsample.to_csv(file3, sep="\t")
+bgccount.to_csv(file1, sep="\t", index=False)
+bgcsumcontig.to_csv(file2, sep="\t", index=False)
+bgcsumsample.to_csv(file3, sep="\t", index=False)
 
 
 
