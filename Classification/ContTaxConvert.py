@@ -30,5 +30,5 @@ tax = tax[['sample', 'contig', 'phylum']]
 
 #save
 file1=sampleid+'_ContigTax.tsv'
-tax.to_csv(file1, sep="\t")
+tax.to_csv(file1, sep="\t", index=False)
 
