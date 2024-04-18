@@ -15,7 +15,7 @@ filename = sys.argv[1] #Name of file
 path = sys.argv[2] #path
 file = path + filename #filepath
 sample = filename.rsplit( ".", 1 )[ 0 ] #sample name is file without extension
-sampleid = sample.rsplit("_", 1)[0] #remove underscores and anything to strip down to sample ID
+sampleid = sample.split("_")[0] #remove underscores and anything to strip down to sample ID
 antismash = json.load(open(file))
 
 #get 2 nested json structures
