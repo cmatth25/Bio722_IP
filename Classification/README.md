@@ -11,6 +11,6 @@ combinekreport.sh to pull together individual sample reports into one file
 
 
 
+ExtractContigPhyla.sh
 
-
-ContTaxConvert.py processes the Contig classification taxa output
+Convertloop.sh uses ContTaxConvert.py to process the Contig classification taxa outputs for all samples
