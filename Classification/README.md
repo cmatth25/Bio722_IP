@@ -18,6 +18,8 @@ Classify assembled contigs:
 
 ContigClassification.sh classifies filtered contigs, kraken output used for conversion using KrakenTools kraken2_translate.py
 
+ContigTaxonomy.sh uses kraken2_translate.py tool from KrakenTools to convert kraken taxid to full taxonomy
+
 ExtractContigPhyla.sh extracts phyla for each contig where applicable
 
 Convertloop.sh uses ContTaxConvert.py to process the Contig classification taxa outputs for all samples
