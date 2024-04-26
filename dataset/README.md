@@ -1,4 +1,4 @@
-tmdb... and mardb... collectively represent "Supplementary Sample Files"
+tmdb... and marmdb... collectively represent "Supplementary Sample Files"
 
 prefetch, fastq dump with SRAget.sh files in metagenomes.txt
 
